@@ -31,6 +31,5 @@ formElement.addEventListener("submit", (event) => {
             resultElement.innerText = ` ${uah.toFixed(2)} hrywien ukraińskich.`;
             break;
     }
-
 });
 
