@@ -16,19 +16,19 @@ formElement.addEventListener("submit", (event) => {
 
     switch (chooseCurrency) {
         case "DOLAR":
-            resultElement.innerText = ` ${usd.toFixed(2)} dolarów.`;
+            resultElement.innerText = `Za ${currencyValue.value} złotych dostaniesz ${usd.toFixed(2)} dolarów.`;
             break;
         case "EURO":
-            resultElement.innerText = ` ${eur.toFixed(2)} euro.`;
+            resultElement.innerText = `Za ${currencyValue.value} złotych dostaniesz  ${eur.toFixed(2)} euro.`;
             break;
         case "FUNT BRYTYJSKI":
-            resultElement.innerText = ` ${gbp.toFixed(2)} funtów brytyjskich.`;
+            resultElement.innerText = `Za ${currencyValue.value} złotych dostaniesz  ${gbp.toFixed(2)} funtów brytyjskich.`;
             break;
         case "FRANK SZWAJCARSKI":
-            resultElement.innerText = ` ${chf.toFixed(2)} franków szwajcarskich.`;
+            resultElement.innerText = `Za ${currencyValue.value} złotych dostaniesz  ${chf.toFixed(2)} franków szwajcarskich.`;
             break;
         case "HRYWNA UKRAIŃSKA":
-            resultElement.innerText = ` ${uah.toFixed(2)} hrywien ukraińskich.`;
+            resultElement.innerText = `Za ${currencyValue.value} złotych dostaniesz  ${uah.toFixed(2)} hrywien ukraińskich.`;
             break;
     }
 });
