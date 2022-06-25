@@ -11,6 +11,7 @@ formElement.addEventListener("submit", (event) => {
     let eur = +currencyValue.value * 0.21;
     let gbp = +currencyValue.value * 0.18;
     let chf = +currencyValue.value * 0.22;
+    let uah = +currencyValue.value * 6.65;
     let chooseCurrency = chooseCurrencyElement.value;
 
     switch (chooseCurrency) {
@@ -25,6 +26,9 @@ formElement.addEventListener("submit", (event) => {
             break;
         case "FRANK SZWAJCARSKI":
             resultElement.innerText = ` ${chf.toFixed(2)} franków szwajcarskich.`;
+            break;
+        case "HRYWNA UKRAIŃSKA":
+            resultElement.innerText = ` ${uah.toFixed(2)} hrywien ukraińskich.`;
             break;
     }
 
