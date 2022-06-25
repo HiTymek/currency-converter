@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;600&display=swap"
+        rel="stylesheet">
+    <script defer src="/js/script.js"></script>
+    <title>Wirtualny Kantor - Centuś</title>
+</head>
+
+<body class="body">
+    <h1 class="header">WIRTUALNY KANTOR CENTUŚ 😎</h1>
+    <form class="form js-form">
+        <fieldset class="form__fieldset">
+            <legend class="form__legend">WYMIANA WALUT</legend>
+            <p class="form__paragraph">
+                <label class="form__label" for="chooseCurrency">WYBIERZ WALUTE</label>
+                <select class="form__field js-chooseCurrency" id="chooseCurrency" name="chooseCurrency">
+                    <option>EURO</option>
+                    <option>DOLAR</option>
+                    <option>FUNT BRYTYJSKI</option>
+                    <option>FRANK SZWAJCARSKI</option>
+                </select>
+            </p>
+            <p class="form__paragraph">
+                <label class="form__label" for="currencyValue">WPISZ KWOTĘ</label>
+                <input class="form__field js-currencyValue" type="number" id="currencyValue" min="1" step="0.1"
+                    placeholder="Kwotę podaj w PLN">
+            </p>
+            <p class="form__paragraph">Dostaniesz<strong class="js-result"></strong></p>
+            <p class="form__paragraph">
+                <button class="form__button">PRZELICZ</button>
+            </p>
+        </fieldset>
+    </form>
+</body>
+
+</html>
