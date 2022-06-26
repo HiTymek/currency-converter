@@ -1,33 +1,28 @@
 {
 
-    const calculateResult = () => {
+    const calculateResult = (currency, amount) => {
 
-        const resultElement = document.querySelector(".js-result");
-        const chooseCurrencyElement = document.querySelector(".js-chooseCurrency");
-        const currencyValue = document.querySelector(".js-currencyValue");
+        const rateUSD = 4.44;
+        const rateEUR = 4.70;
+        const rateGBP = 5.45;
+        const rateCHF = 4.64;
+        const rateUAH = 0.15;
 
-        const chooseCurrency = chooseCurrencyElement.value;
-        const usd = +currencyValue.value * 0.23;
-        const eur = +currencyValue.value * 0.21;
-        const gbp = +currencyValue.value * 0.18;
-        const chf = +currencyValue.value * 0.22;
-        const uah = +currencyValue.value * 6.65;
-
-        switch (chooseCurrency) {
+        switch (currency) {
             case "DOLAR":
-                return resultElement.innerText = `Za ${currencyValue.value} złotych dostaniesz ${usd.toFixed(2)} dolarów.`;
+                return amount / rateUSD;
 
             case "EURO":
-                return resultElement.innerText = `Za ${currencyValue.value} złotych dostaniesz  ${eur.toFixed(2)} euro.`;
+                return amount / rateEUR;
 
             case "FUNT BRYTYJSKI":
-                return resultElement.innerText = `Za ${currencyValue.value} złotych dostaniesz  ${gbp.toFixed(2)} funtów brytyjskich.`;
+                return amount / rateGBP;
 
             case "FRANK SZWAJCARSKI":
-                return resultElement.innerText = `Za ${currencyValue.value} złotych dostaniesz  ${chf.toFixed(2)} franków szwajcarskich.`;
+                return amount / rateCHF;
 
             case "HRYWNA UKRAIŃSKA":
-                return resultElement.innerText = `Za ${currencyValue.value} złotych dostaniesz  ${uah.toFixed(2)} hrywien ukraińskich.`;
+                return amount / rateUAH;
 
         }
     }
@@ -36,7 +31,16 @@
 
     formElement.addEventListener("submit", (event) => {
         event.preventDefault();
+        const chooseCurrencyElement = document.querySelector(".js-chooseCurrency");
+        const currencyValue = document.querySelector(".js-currencyValue");
+        const resultElement = document.querySelector(".js-result");
 
+        const amount = +currencyValue.value;
+        const currency = chooseCurrencyElement.value;
+
+        let result = calculateResult(currency, amount);
+
+        resultElement.innerText = `ZA ${amount} PLN DOSTANIESZ ${result.toFixed(2)} ${currency}`;
 
         calculateResult()
 
