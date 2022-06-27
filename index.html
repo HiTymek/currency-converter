@@ -9,6 +9,7 @@
     <link rel="icon" href="images/icon.jpg">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,32 +19,52 @@
     <title>Wirtualny Kantor - Centuś</title>
 </head>
 
-<body class="body">
-    <h1 class="header">WIRTUALNY KANTOR CENTUŚ 😎</h1>
-    <form class="form js-form">
-        <fieldset class="form__fieldset">
-            <legend class="form__legend">WYMIANA WALUT</legend>
-            <p class="form__paragraph">
-                <label class="form__label" for="chooseCurrency">WYBIERZ WALUTE</label>
-                <select class="form__field js-chooseCurrency" id="chooseCurrency" name="chooseCurrency">
-                    <option>EURO</option>
-                    <option>DOLAR</option>
-                    <option>FUNT BRYTYJSKI</option>
-                    <option>FRANK SZWAJCARSKI</option>
-                    <option>HRYWNA UKRAIŃSKA</option>
-                </select>
-            </p>
-            <p class="form__paragraph">
-                <label class="form__label" for="currencyValue">WPISZ KWOTĘ</label>
-                <input class="form__field js-currencyValue" type="number" id="currencyValue" min="1" step="0.1"
-                    placeholder="Kwotę podaj w PLN">
-            </p>
-            <p class="form__paragraph">WYNIK : <strong class="js-result"></strong></p>
-            <p class="form__paragraph">
-                <button class="form__button">PRZELICZ</button>
-            </p>
-        </fieldset>
-    </form>
+<body class="body js-body">
+
+    <header>
+        <h1 class="header">WIRTUALNY KANTOR CENTUŚ 😎</h1>
+    </header>
+
+    <main class="main">
+
+        <form class="form js-form">
+
+            <fieldset class="form__fieldset">
+
+                <legend class="form__legend">WYMIANA WALUT</legend>
+
+                <p class="form__paragraph">
+                    <label class="form__label" for="currency">WYBIERZ WALUTE</label>
+                    <select class="form__field js-currency" id="currency" name="currency">
+                        <option>EURO</option>
+                        <option>DOLAR</option>
+                        <option>FUNT BRYTYJSKI</option>
+                        <option>FRANK SZWAJCARSKI</option>
+                        <option>HRYWNA UKRAIŃSKA</option>
+                    </select>
+                </p>
+
+                <p class="form__paragraph">
+                    <label class="form__label" for="amount">WPISZ KWOTĘ W PLN</label>
+                    <input class="form__field js-amount" type="number" id="amount" min="1" step="0.1"
+                        placeholder="Kwotę podaj w PLN">
+                </p>
+
+                <p class="form__paragraph">WYNIK : <strong class="js-result"></strong></p>
+
+                <p class="form__paragraph">
+                    <button class="form__button">PRZELICZ</button>
+                </p>
+
+            </fieldset>
+
+        </form>
+
+        <button class="main__button js-toggleBackgroundButton">Zmień tryb na <span
+                class="js-buttonInnerText">ciemny</span></button>
+
+    </main>
+
 </body>
 
 </html>

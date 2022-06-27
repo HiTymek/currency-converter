@@ -10,10 +10,14 @@ html {
     font-family: "Montserrat", sans-serif;
 }
 
+.body--darkMode {
+    background-color: #ccc;
+}
+
 .header {
     text-align: center;
     color: teal;
     margin: 35px 0;
     font-size: 26px;
-    
+
 }

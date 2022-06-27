@@ -1,0 +1,18 @@
+.main {
+    text-align: center;
+}
+
+.main__button {
+    margin-top: 30px;
+    padding: 30px;
+    background-color: teal;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    width: 280px;
+}
+
+.main__button:hover {
+    background-color: hsl(180, 100%, 20%);
+    cursor: pointer;
+}
