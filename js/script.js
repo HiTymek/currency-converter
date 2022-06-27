@@ -35,11 +35,11 @@
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        const chooseCurrencyElement = document.querySelector(".js-chooseCurrency");
-        const currencyValue = document.querySelector(".js-currencyValue");
+        const currencyElement = document.querySelector(".js-currency");
+        const amountElement = document.querySelector(".js-amount");
 
-        const amount = +currencyValue.value;
-        const currency = chooseCurrencyElement.value;
+        const amount = +amountElement.value;
+        const currency = currencyElement.value;
 
         const result = calculateResult(currency, amount);
 
@@ -47,13 +47,36 @@
 
     };
 
-    const init = () => {
-        const formElement = document.querySelector(".js-form");
+    const changeBackground = () => {
+        const bodyElement = document.querySelector(".js-body");
+        bodyElement.classList.toggle("body--darkMode");
 
-        formElement.addEventListener("submit", (onFormSubmit))
+    }
+
+    const changeButtonInnerText = () => {
+        const buttonInnerText = document.querySelector(".js-buttonInnerText");
+        const bodyElement = document.querySelector(".body");
+
+        if (bodyElement.classList.contains("body--darkMode")) {
+            buttonInnerText.innerText = "jasny";
+        } else {
+            buttonInnerText.innerText = "ciemny";
+        }
+    }
+
+    const init = () => {
+
+        const formElement = document.querySelector(".js-form");
+        const toggleBackgroundButton = document.querySelector(".js-toggleBackgroundButton");
+
+        formElement.addEventListener("submit", (onFormSubmit));
+        toggleBackgroundButton.addEventListener("click", (changeBackground));
+        toggleBackgroundButton.addEventListener("click", (changeButtonInnerText));
+
     }
 
     init()
+
 }
 
 
