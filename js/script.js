@@ -1,4 +1,6 @@
 {
+    const bodyElement = document.querySelector(".body");
+
     const calculateResult = (currency, amount) => {
 
         const rateUSD = 4.44;
@@ -47,15 +49,13 @@
 
     };
 
-    const changeBackground = () => {
-        const bodyElement = document.querySelector(".js-body");
+    const toggleBackground = () => {
         bodyElement.classList.toggle("body--darkMode");
 
     }
 
-    const changeButtonInnerText = () => {
-        const buttonInnerText = document.querySelector(".js-buttonInnerText");
-        const bodyElement = document.querySelector(".body");
+    const toggleButtonInnerText = () => {
+        const buttonInnerText = document.querySelector(".js-toggleButtonInnerText");
 
         if (bodyElement.classList.contains("body--darkMode")) {
             buttonInnerText.innerText = "jasny";
@@ -64,14 +64,21 @@
         }
     }
 
+    const render = () => {
+
+        toggleButtonInnerText();
+        toggleBackground();
+
+    }
+
     const init = () => {
 
         const formElement = document.querySelector(".js-form");
         const toggleBackgroundButton = document.querySelector(".js-toggleBackgroundButton");
 
-        formElement.addEventListener("submit", (onFormSubmit));
-        toggleBackgroundButton.addEventListener("click", (changeBackground));
-        toggleBackgroundButton.addEventListener("click", (changeButtonInnerText));
+        formElement.addEventListener("submit", onFormSubmit);
+        toggleBackgroundButton.addEventListener("click", render)
+
 
     }
 
