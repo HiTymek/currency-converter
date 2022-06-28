@@ -1,5 +1,5 @@
 {
-    const bodyElement = document.querySelector(".body");
+    const bodyElement = document.body;
 
     const calculateResult = (currency, amount) => {
 
@@ -50,17 +50,20 @@
     };
 
     const toggleBackground = () => {
+
         bodyElement.classList.toggle("body--darkMode");
 
     }
 
     const toggleButtonInnerText = () => {
+
         const buttonInnerText = document.querySelector(".js-toggleButtonInnerText");
 
         bodyElement.classList.contains("body--darkMode") ? buttonInnerText.innerText = "ciemny" : buttonInnerText.innerText = "jasny";
+
     }
 
-    const render = () => {
+    const toggleTheme = () => {
 
         toggleButtonInnerText();
         toggleBackground();
@@ -73,8 +76,7 @@
         const toggleBackgroundButton = document.querySelector(".js-toggleBackgroundButton");
 
         formElement.addEventListener("submit", onFormSubmit);
-        toggleBackgroundButton.addEventListener("click", render)
-
+        toggleBackgroundButton.addEventListener("click", toggleTheme)
 
     }
 
