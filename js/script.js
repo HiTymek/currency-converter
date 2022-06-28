@@ -10,19 +10,19 @@
         const rateUAH = 0.15;
 
         switch (currency) {
-            case "DOLAR":
+            case "USD":
                 return amount / rateUSD;
 
-            case "EURO":
+            case "EUR":
                 return amount / rateEUR;
 
-            case "FUNT BRYTYJSKI":
+            case "GBP":
                 return amount / rateGBP;
 
-            case "FRANK SZWAJCARSKI":
+            case "CHF":
                 return amount / rateCHF;
 
-            case "HRYWNA UKRAIŃSKA":
+            case "UAH":
                 return amount / rateUAH;
 
         }
@@ -57,11 +57,7 @@
     const toggleButtonInnerText = () => {
         const buttonInnerText = document.querySelector(".js-toggleButtonInnerText");
 
-        if (bodyElement.classList.contains("body--darkMode")) {
-            buttonInnerText.innerText = "jasny";
-        } else {
-            buttonInnerText.innerText = "ciemny";
-        }
+        bodyElement.classList.contains("body--darkMode") ? buttonInnerText.innerText = "ciemny" : buttonInnerText.innerText = "jasny";
     }
 
     const render = () => {
