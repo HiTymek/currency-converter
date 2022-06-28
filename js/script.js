@@ -59,7 +59,7 @@
 
         const buttonInnerText = document.querySelector(".js-toggleButtonInnerText");
 
-        bodyElement.classList.contains("body--darkMode") ? buttonInnerText.innerText = "ciemny" : buttonInnerText.innerText = "jasny";
+        buttonInnerText.innerText = bodyElement.classList.contains("body--darkMode") ? "ciemny" : "jasny";
 
     }
 
