@@ -8,11 +8,15 @@ html {
 
 .body {
     font-family: "Montserrat", sans-serif;
+    background-image: url("/images/landscape.jpg");
+
 }
 
 .body--darkMode {
-    background-color: #ccc;
+    background-image: url("/images/darkMode.jpg");
+    background-position: center;
 }
+
 
 .header {
     text-align: center;

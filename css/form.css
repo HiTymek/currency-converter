@@ -4,8 +4,9 @@
 }
 
 .form__fieldset {
-    border: 2px solid teal;
+    border: 3px solid teal;
     border-radius: 5px;
+    background-color: #fff;
 }
 
 .form__legend {
