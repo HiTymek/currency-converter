@@ -1,5 +1,4 @@
 {
-    const bodyElement = document.body;
     const calculateResult = (currency, amount) => {
 
         const rateUSD = 4.44;
@@ -45,18 +44,20 @@
         updateResultText(amount, result, currency)
     };
 
-    const toggleBackground = () => {
+    const toggleBackground = (bodyElement) => {
         bodyElement.classList.toggle("body--darkMode");
     }
 
-    const toggleButtonInnerText = () => {
+    const toggleButtonInnerText = (bodyElement) => {
         const buttonInnerText = document.querySelector(".js-toggleButtonInnerText");
         buttonInnerText.innerText = bodyElement.classList.contains("body--darkMode") ? "ciemny" : "jasny";
     }
 
     const toggleTheme = () => {
-        toggleButtonInnerText();
-        toggleBackground();
+        const bodyElement = document.body;
+
+        toggleButtonInnerText(bodyElement);
+        toggleBackground(bodyElement);
     }
 
     const init = () => {
