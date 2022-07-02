@@ -1,6 +1,5 @@
 {
     const bodyElement = document.body;
-
     const calculateResult = (currency, amount) => {
 
         const rateUSD = 4.44;
@@ -24,12 +23,10 @@
 
             case "UAH":
                 return amount / rateUAH;
-
         }
     }
 
     const updateResultText = (amount, result, currency) => {
-
         const resultElement = document.querySelector(".js-result");
         resultElement.innerText = `ZA ${amount} PLN DOSTANIESZ ${result.toFixed(2)} ${currency}`;
     }
@@ -46,38 +43,28 @@
         const result = calculateResult(currency, amount);
 
         updateResultText(amount, result, currency)
-
     };
 
     const toggleBackground = () => {
-
         bodyElement.classList.toggle("body--darkMode");
-
     }
 
     const toggleButtonInnerText = () => {
-
         const buttonInnerText = document.querySelector(".js-toggleButtonInnerText");
-
         buttonInnerText.innerText = bodyElement.classList.contains("body--darkMode") ? "ciemny" : "jasny";
-
     }
 
     const toggleTheme = () => {
-
         toggleButtonInnerText();
         toggleBackground();
-
     }
 
     const init = () => {
-
         const formElement = document.querySelector(".js-form");
         const toggleBackgroundButton = document.querySelector(".js-toggleBackgroundButton");
 
         formElement.addEventListener("submit", onFormSubmit);
         toggleBackgroundButton.addEventListener("click", toggleTheme)
-
     }
 
     init()
